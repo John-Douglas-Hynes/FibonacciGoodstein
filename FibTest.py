@@ -1,3 +1,5 @@
+import TreeAlgs
+
 def fibonacci(integer):
     fib_table = {0:1, 1:1}
     for x in range(2, integer+1):
@@ -23,22 +25,14 @@ def fib_decomp(integer):
 def string_decomp(integer):
     return ' + '.join(f'F{{{x}}}' for x in fib_decomp(integer))
 
-class tree:
-    def __init__(self, val = 0, children = []):
-        self.val = val
-        self.children = children
-
 def recursive_fib(root, top):
-    if root.children == []:
-        if root.val > top:
-            children = []
-            for x in fib_decomp(root.val):
-                children.append(tree(val = x, children = []))
+    queue = root.children
+    new_root = fib_decomp(root.val)
+    # to be finished later
+
 
 
 ### Testing nonsense
 
-print(f'1001 = {string_decomp(1001)}')
-print(f'{fib_table[15]} + {fib_table[6]} + {fib_table[1]} = {fib_table[15] + fib_table[6] + fib_table[1]}')
-arr = fib_decomp(1001)
-recursive_fib(arr, 5)
+tr = TreeAlgs.tree(-1, [TreeAlgs.tree(101, [])])
+tr.fibonacci_print(tr, '') 
