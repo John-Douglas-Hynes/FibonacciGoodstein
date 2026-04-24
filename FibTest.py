@@ -1,4 +1,4 @@
-import TreeAlgs
+from TreeAlgs import *
 
 def fibonacci(integer):
     fib_table = {0:1, 1:1}
@@ -34,5 +34,5 @@ def recursive_fib(root, top):
 
 ### Testing nonsense
 
-tr = TreeAlgs.tree(-1, [TreeAlgs.tree(101, [])])
+tr = tree(-1, [tree(101, [])])
 tr.fibonacci_print(tr, '') 
